@@ -46,6 +46,17 @@ nav {
     background: transparent;
 }
 
+.logo-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #128C7E;
+    margin-left: 1rem;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+}
+
 nav ul {
     display: flex;
     align-items: center;
@@ -297,10 +308,10 @@ footer {
 
 .footer-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 4rem;
-    max-width: 900px;
+    gap: 0;
+    max-width: 1100px;
     margin: 0 auto;
     flex-wrap: wrap;
     text-align: center;
@@ -319,13 +330,14 @@ footer {
 }
 
 .footer-section {
-    flex: 1 1 250px;
+    flex: 1 1 0;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 220px;
     margin-bottom: 1rem;
+    padding: 0 1rem;
 }
 
 .footer-section h4 {
@@ -355,6 +367,20 @@ footer {
     color: #ccc;
 }
 
+.footer-email {
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+.footer-email:hover {
+    color: #25D366;
+    text-decoration: none;
+}
+
 /* Responsive Design */
 @media (max-width: 900px) {
     nav {
@@ -375,6 +401,19 @@ footer {
     nav a.cta-button {
         margin-left: 0;
         margin-top: 0.5rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 100%;
+    }
+    .footer-section {
+        width: 100%;
+        padding: 0;
+    }
+    .logo-text {
+        font-size: 1.4rem;
+        margin-left: 0.7rem;
     }
 }
 
@@ -420,4 +459,18 @@ footer {
     background: #128C7E;
     color: #fff;
     border-color: #075E54;
+}
+
+.terms-link {
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+.terms-link:hover {
+    color: #25D366;
+    text-decoration: none;
 } 
