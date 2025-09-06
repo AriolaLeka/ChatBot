@@ -14,6 +14,12 @@ body {
     background-color: #F5F5F5;
 }
 
+/* Container centering */
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
 /* Subtext styling - smaller, straighter text */
 .section-subtitle, .hero-subtitle, .subtitle, p.subtitle {
     font-family: 'Brandon Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -49,14 +55,7 @@ h2 {
 }
 
 h2::after {
-    content: '';
-    position: absolute;
-    bottom: -0.3em;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: #000000;
-    width: 100%;
+    display: none;
 }
 
 /* Header and Navigation */
@@ -205,7 +204,7 @@ nav a {
 
 nav a.cta-button {
     padding: 0.5rem 1.3rem;
-    background: linear-gradient(135deg, #9FB3DF 0%, #9EC6F3 100%);
+    background: #128C7E;
     color: white;
     border-radius: 5px;
     font-weight: 600;
@@ -214,12 +213,12 @@ nav a.cta-button {
     height: 40px;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 8px rgba(159,179,223,0.15);
+    box-shadow: 0 2px 8px rgba(18, 140, 126, 0.15);
 }
 
 nav a.cta-button:hover {
     transform: translateY(-2px);
-    background-color: #357ABD;
+    background-color: #0F7A6B;
 }
 
 /* Hero Section - Clean & Focused */
@@ -324,7 +323,7 @@ nav a.cta-button:hover {
 .hero-main-icon {
     width: 80px;
     height: 80px;
-    color: white;
+    color: #1A1A1A;
     animation: pulse 2s ease-in-out infinite;
 }
 
@@ -356,7 +355,7 @@ nav a.cta-button:hover {
 }
 
 .cta-primary {
-    background: linear-gradient(135deg, #9FB3DF 0%, #9EC6F3 100%);
+    background: #128C7E;
     color: white;
     padding: 1rem 2.5rem;
     border-radius: 50px;
@@ -364,7 +363,7 @@ nav a.cta-button:hover {
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(159, 179, 223, 0.4);
+    box-shadow: 0 8px 25px rgba(18, 140, 126, 0.4);
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -372,14 +371,15 @@ nav a.cta-button:hover {
 
 .cta-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(159, 179, 223, 0.5);
+    background: #0F7A6B;
+    box-shadow: 0 12px 35px rgba(18, 140, 126, 0.6);
 }
 
 .cta-secondary {
-    background: rgba(255, 255, 255, 0.1);
+    background: #1A1A1A;
     color: white;
     padding: 1rem 2.5rem;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid #1A1A1A;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
@@ -388,12 +388,11 @@ nav a.cta-button:hover {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    backdrop-filter: blur(10px);
 }
 
 .cta-secondary:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
+    background: #2A2A2A;
+    border-color: #2A2A2A;
     transform: translateY(-3px);
 }
 
@@ -420,21 +419,21 @@ nav a.cta-button:hover {
 .stat-icon {
     width: 24px;
     height: 24px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #2A2A2A;
 }
 
 .stat-number {
     display: block;
     font-size: 2.5rem;
     font-weight: 800;
-    color: white;
+    color: #1A1A1A;
     line-height: 1;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-shadow: none;
 }
 
 .stat-label {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #2A2A2A;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -446,7 +445,7 @@ nav a.cta-button:hover {
     align-items: center;
     gap: 0.5rem;
     padding: 0.8rem 2rem;
-    background: linear-gradient(135deg, #9FB3DF 0%, #9EC6F3 100%);
+    background: #128C7E;
     color: white;
     text-decoration: none;
     border-radius: 50px;
@@ -454,7 +453,7 @@ nav a.cta-button:hover {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 15px rgba(18, 140, 126, 0.3);
 }
 
 .cta-button .btn-icon {
@@ -468,14 +467,15 @@ nav a.cta-button:hover {
 
 .cta-button:hover {
     transform: translateY(-2px);
-    background-color: #128C7E;
+    background-color: #0F7A6B;
+    box-shadow: 0 6px 20px rgba(18, 140, 126, 0.4);
 }
 
 /* Features Section */
 .features {
     padding: 5rem 2rem;
     background: #E8F0E0;
-    margin: 2rem 1rem;
+    margin: 2rem auto;
     border-radius: 30px;
     max-width: calc(100% - 2rem);
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -489,11 +489,13 @@ nav a.cta-button:hover {
 }
 
 .features-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .feature-card {
@@ -502,18 +504,41 @@ nav a.cta-button:hover {
     border-radius: 20px;
     text-align: center;
     box-shadow: none;
-    transition: transform 0.3s ease;
+    /* Removed transition to prevent layout shifts */
     border: 2px solid #1A1A1A;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
+    /* Removed hover transform to prevent layout shifts */
 }
 
 .feature-card i {
     font-size: 2.5rem;
     color: #2A4A5A;
     margin-bottom: 1rem;
+    flex-shrink: 0;
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    flex-shrink: 0;
+}
+
+.feature-card p {
+    line-height: 1.5;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* How It Works Section */
@@ -542,17 +567,12 @@ nav a.cta-button:hover {
     padding: 2rem;
 }
 
-.step-number {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #9FB3DF 0%, #9EC6F3 100%);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1rem;
-    font-weight: bold;
+.step i {
+    font-size: 2.5rem;
+    color: #2A4A5A;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
 }
 
 /* Use Cases Section */
@@ -560,7 +580,7 @@ nav a.cta-button:hover {
     padding: 5rem 2rem;
     background: #D8E8EA;
     max-width: calc(100% - 2rem);
-    margin: 2rem 1rem;
+    margin: 2rem auto;
     border-radius: 30px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
@@ -575,7 +595,7 @@ nav a.cta-button:hover {
 
 .use-cases-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
@@ -598,7 +618,7 @@ nav a.cta-button:hover {
 .contact {
     padding: 5rem 2rem;
     text-align: center;
-    margin: 2rem 1rem;
+    margin: 2rem auto;
     border-radius: 30px;
     background: #D8E8EA;
     max-width: calc(100% - 2rem);
@@ -783,98 +803,6 @@ nav a.cta-button:hover {
     }
 }
 
-/* Testimonials Section */
-section.testimonials {
-    padding: 5rem 2rem !important;
-    background: #F0E8EB !important;
-    text-align: center !important;
-    margin: 2rem 1rem !important;
-    border-radius: 30px !important;
-    max-width: calc(100% - 2rem) !important;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
-}
-
-.testimonials h2 {
-    font-size: 2.2rem;
-    color: #1A1A1A;
-    margin-bottom: 3rem;
-}
-
-.testimonials-container {
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.testimonial-card {
-    display: none !important;
-    background: transparent !important;
-    border: 2px solid #333 !important;
-    padding: 3rem !important;
-    border-radius: 15px !important;
-    box-shadow: none !important;
-    transition: all 0.5s ease !important;
-    margin: 0 auto !important;
-    max-width: 100% !important;
-}
-
-.testimonial-card.active {
-    display: block !important;
-    animation: fadeInUp 0.5s ease !important;
-}
-
-.testimonial-content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #2F2F2F;
-    margin-bottom: 2rem;
-    font-style: italic;
-}
-
-.stars {
-    color: #ffc107;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.author-info h4 {
-    color: #2A2A2A;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-}
-
-.author-info span {
-    color: #3A3A3A;
-    font-size: 0.95rem;
-}
-
-.testimonial-nav {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.testimonial-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: none;
-    background: #ddd;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.testimonial-dot.active {
-    background: #4A90E2;
-    transform: scale(1.2);
-}
 
 /* Pricing Section */
 section.pricing {
@@ -1023,7 +951,7 @@ section.pricing {
 section.faq {
     padding: 5rem 2rem !important;
     background: #F0EFE0 !important;
-    margin: 2rem 1rem !important;
+    margin: 2rem auto !important;
     border-radius: 30px !important;
     max-width: calc(100% - 2rem) !important;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
@@ -1060,7 +988,7 @@ section.faq {
 }
 
 .faq-question:hover {
-    background: #f8f9fa;
+    background: rgba(159, 179, 223, 0.1);
 }
 
 .faq-question h3 {
@@ -1257,7 +1185,7 @@ section.faq {
     padding: 5rem 2rem;
     background: #F0EFE0;
     position: relative;
-    margin: 2rem 1rem;
+    margin: 2rem auto;
     border-radius: 30px;
     max-width: calc(100% - 2rem);
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -1339,7 +1267,7 @@ section.faq {
     padding: 5rem 2rem;
     background: #E8F0E0;
     position: relative;
-    margin: 2rem 1rem;
+    margin: 2rem auto;
     border-radius: 30px;
     max-width: calc(100% - 2rem);
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -1395,18 +1323,12 @@ section.faq {
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
-.step-number {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #9FB3DF 0%, #9EC6F3 100%);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin: 0 auto 1rem;
+.step i {
+    font-size: 2.5rem;
+    color: #2A4A5A;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
 }
 
 .step-icon {
@@ -1460,30 +1382,52 @@ section.faq {
 
 /* Secondary CTA Section */
 .secondary-cta {
-    padding: 5rem 2rem;
-    background: #F0E8EB;
-    color: #1A1A1A;
+    padding: 6rem 3rem;
+    background: linear-gradient(135deg, #9FB3DF 0%, #9EC6F3 100%);
+    color: white;
     text-align: center;
-    margin: 2rem 1rem;
+    margin: 2rem auto;
     border-radius: 30px;
     max-width: calc(100% - 2rem);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 40px rgba(159, 179, 223, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.secondary-cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: float 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
 }
 
 .cta-content h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 1rem;
-    color: #000000;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .cta-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-    max-width: 600px;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    opacity: 0.95;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    color: white;
+    line-height: 1.6;
 }
 
 .cta-buttons {
@@ -1494,25 +1438,33 @@ section.faq {
 }
 
 .cta-buttons .cta-primary {
-    background: white;
-    color: #2A4A5A;
-    box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+    background: #128C7E;
+    color: white;
+    box-shadow: 0 8px 25px rgba(18, 140, 126, 0.4);
+    font-size: 1.2rem;
+    padding: 1.2rem 3rem;
+    font-weight: 700;
 }
 
 .cta-buttons .cta-primary:hover {
-    background: #f8f9fa;
-    box-shadow: 0 12px 35px rgba(255,255,255,0.4);
+    background: #0F7A6B;
+    box-shadow: 0 12px 35px rgba(18, 140, 126, 0.6);
+    transform: translateY(-3px);
 }
 
 .cta-buttons .cta-secondary {
     background: transparent;
     color: white;
     border: 2px solid white;
+    font-size: 1.2rem;
+    padding: 1.2rem 3rem;
+    font-weight: 700;
 }
 
 .cta-buttons .cta-secondary:hover {
     background: white;
-    color: #2A4A5A;
+    color: #1A1A1A;
+    transform: translateY(-3px);
 }
 
 /* Mobile Responsive */
@@ -1539,8 +1491,12 @@ section.faq {
     }
     
     .features-grid {
-        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
+    }
+    
+    .feature-card {
+        min-width: 200px;
+        max-width: 250px;
     }
     
     .benefits-grid {
@@ -1571,7 +1527,7 @@ section.faq {
 .customer-journey {
     padding: 5rem 2rem;
     background: #D8E8EA;
-    margin: 2rem 1rem;
+    margin: 2rem auto;
     border-radius: 30px;
     max-width: calc(100% - 2rem);
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -1606,34 +1562,14 @@ section.faq {
     border: 2px solid #1A1A1A;
 }
 
-.step::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(135deg, #9FB3DF 0%, #9EC6F3 100%);
-}
+/* Removed step::before - no more horizontal blue line */
 
 .step:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
-.step-number {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #9FB3DF 0%, #9EC6F3 100%);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0 auto 1.5rem;
-}
+/* Removed step-number styling - now using icons */
 
 .step h3 {
     font-size: 1.8rem;
@@ -1680,11 +1616,7 @@ section.faq {
         padding: 2rem;
     }
     
-    .step-number {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
-    }
+    /* Removed step-number styling - now using icons */
     
     .step h3 {
         font-size: 1.5rem;
@@ -1693,13 +1625,15 @@ section.faq {
 
 /* Footer */
 footer {
-    background: #F0E8EB;
-    color: #1A1A1A;
-    padding: 2rem;
+    background: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 100%);
+    color: white;
+    padding: 4rem 2rem 2rem;
     margin: 2rem 1rem 0;
     border-radius: 30px 30px 0 0;
     max-width: calc(100% - 2rem);
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 -8px 40px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
 }
 
 .footer-content {
@@ -1738,42 +1672,44 @@ footer {
 
 .footer-section h4 {
     margin-bottom: 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
 }
 
 .footer-section p, .footer-section a {
-    color: #1A1A1A;
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 0.5rem;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
 .footer-divider {
     border: none;
-    border-top: 1px solid rgba(26,26,26,0.2);
-    margin: 1.2rem auto 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 2rem auto 0 auto;
     width: 90%;
 }
 
 .footer-bottom {
     text-align: center;
-    margin-top: 0.7rem;
-    padding-top: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
     font-size: 1rem;
-    color: #3A3A3A;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-email {
-    color: #1A1A1A;
+    color: rgba(255, 255, 255, 0.9);
     cursor: pointer;
-    transition: color 0.2s;
-    font-weight: 500;
+    transition: color 0.3s ease;
+    font-weight: 600;
     font-size: 1.1rem;
     display: inline-block;
     margin-top: 0.5rem;
 }
 .footer-email:hover {
-    color: #2A4A5A;
+    color: white;
     text-decoration: none;
 }
 
@@ -1828,23 +1764,21 @@ footer {
 }
 
 /* Advanced Interactive Elements */
-.feature-card, .step, .use-case {
+.step, .use-case {
     animation: fadeIn 0.5s ease-out forwards;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .feature-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    animation: glow 3s infinite;
+    /* Removed hover effects to prevent layout shifts */
 }
 
 .feature-card i {
-    transition: color 0.3s ease;
+    /* Removed transition to prevent layout shifts */
 }
 
 .feature-card:hover i {
-    color: #128C7E;
+    /* Removed hover color change to prevent layout shifts */
 }
 
 /* Pulse Animation for CTA Buttons */
@@ -1973,8 +1907,14 @@ footer {
     }
     
     .features-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
         gap: 1rem;
+    }
+    
+    .feature-card {
+        min-width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -2050,16 +1990,16 @@ footer {
 }
 
 .terms-link {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
     cursor: pointer;
-    transition: color 0.2s;
+    transition: color 0.3s ease;
     font-weight: 500;
     font-size: 1.1rem;
     display: inline-block;
     margin-top: 0.5rem;
 }
 .terms-link:hover {
-    color: #2A4A5A;
+    color: white;
     text-decoration: none;
 }
 
@@ -2069,6 +2009,7 @@ footer {
 @media (min-width: 1200px) {
     .container {
         max-width: 1200px;
+        margin: 0 auto;
     }
     
     .hero h1 {
@@ -2076,8 +2017,17 @@ footer {
     }
     
     .features-grid {
-        grid-template-columns: repeat(4, 1fr);
         gap: 3rem;
+    }
+    
+    .feature-card {
+        min-width: 250px;
+        max-width: 300px;
+    }
+    
+    .use-cases-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
     }
 }
 
@@ -2085,6 +2035,7 @@ footer {
 @media (max-width: 1199px) and (min-width: 992px) {
     .container {
         max-width: 960px;
+        margin: 0 auto;
     }
     
     .hero h1 {
@@ -2092,6 +2043,15 @@ footer {
     }
     
     .features-grid {
+        gap: 2rem;
+    }
+    
+    .feature-card {
+        min-width: 200px;
+        max-width: 250px;
+    }
+    
+    .use-cases-grid {
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
     }
@@ -2101,6 +2061,7 @@ footer {
 @media (max-width: 991px) and (min-width: 768px) {
     .container {
         max-width: 720px;
+        margin: 0 auto;
     }
     
     .hero h1 {
@@ -2112,13 +2073,17 @@ footer {
     }
     
     .features-grid {
-        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+    }
+    
+    .feature-card {
+        min-width: 200px;
+        max-width: 250px;
     }
     
     .use-cases-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 1.5rem;
     }
     
     .steps {
@@ -2163,6 +2128,7 @@ footer {
     .container {
         max-width: 540px;
         padding: 0 1rem;
+        margin: 0 auto;
     }
     
     .hero {
@@ -2230,8 +2196,14 @@ footer {
     }
     
     .features-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
         gap: 1.5rem;
+    }
+    
+    .feature-card {
+        min-width: 100%;
+        max-width: 100%;
     }
     
     .use-cases-grid {
@@ -2306,6 +2278,7 @@ footer {
     .container {
         max-width: 100%;
         padding: 0 0.5rem;
+        margin: 0 auto;
     }
     
     .hero {
@@ -2376,8 +2349,14 @@ footer {
     }
     
     .features-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
         gap: 1rem;
+    }
+    
+    .feature-card {
+        min-width: 100%;
+        max-width: 100%;
     }
     
     .feature-card {
@@ -2486,9 +2465,10 @@ footer {
     
     /* Section margins and padding for mobile */
     section {
-        margin: 1rem 0.25rem;
+        margin: 1rem auto;
         padding: 2rem 1rem;
         border-radius: 20px;
+        max-width: calc(100% - 0.5rem);
     }
     
     .key-benefits,
@@ -2500,8 +2480,9 @@ footer {
     .faq,
     .contact,
     .secondary-cta {
-        margin: 1rem 0.25rem;
+        margin: 1rem auto;
         padding: 2rem 1rem;
+        max-width: calc(100% - 0.5rem);
     }
 }
 
@@ -2659,8 +2640,9 @@ footer {
     }
     
     section {
-        margin: 0.75rem 0.125rem;
+        margin: 0.75rem auto;
         padding: 1.5rem 0.75rem;
+        max-width: calc(100% - 0.25rem);
     }
     
     .key-benefits,
@@ -2672,8 +2654,9 @@ footer {
     .faq,
     .contact,
     .secondary-cta {
-        margin: 0.75rem 0.125rem;
+        margin: 0.75rem auto;
         padding: 1.5rem 0.75rem;
+        max-width: calc(100% - 0.25rem);
     }
 }
 
