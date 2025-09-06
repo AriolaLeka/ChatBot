@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - AtiendeBot</title>
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Adobe+Caslon+Pro:ital,wght@0,400;0,600;1,400;1,600&family=Brandon+Grotesque:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Typography System - Matching Landing Page */
+        :root {
+            --text-xs: 0.875rem;    /* 14px - Small text */
+            --text-sm: 1rem;        /* 16px - Body text */
+            --text-base: 1.125rem;  /* 18px - Large body text */
+            --text-lg: 1.5rem;      /* 24px - Small headings */
+            --text-xl: 2rem;        /* 32px - Large headings */
+            --text-2xl: 3rem;       /* 48px - Hero headings */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Brandon Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            letter-spacing: 0.01em;
+            color: #2A2A2A;
+            background-color: #F0F2F5;
+            font-size: var(--text-sm);
+        }
+
+        /* Header matching landing page */
+        .cookies-header {
+            background-color: transparent;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 0.5rem 1rem 0 1rem;
+        }
+
+        .cookies-header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 2rem;
+            max-width: calc(100% - 2rem);
+            margin: 0 auto;
+            min-height: 70px;
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .cookies-header .logo {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .cookies-header .logo img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            object-fit: contain;
+            background: transparent;
+        }
+
+        .cookies-header .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #128C7E;
+            margin-left: 1rem;
+            letter-spacing: 1px;
+            font-family: 'Brandon Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        .cookies-header .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cookies-header .nav-menu li {
+            margin: 0;
+        }
+
+        .cookies-header .nav-menu a {
+            text-decoration: none;
+            color: #2A2A2A;
+            font-weight: 500;
+            font-size: 1.08rem;
+            transition: color 0.3s ease;
+            padding: 0.5rem 0;
+        }
+
+        .cookies-header .nav-menu a:hover {
+            color: #2A4A5A;
+        }
+
+        .cookies-header .language-switcher {
+            display: flex;
+            gap: 0.5rem;
+            margin-left: 1rem;
+        }
+
+        .cookies-header .lang-btn {
+            background: transparent;
+            border: 1px solid #128C7E;
+            color: #128C7E;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-family: 'Brandon Grotesque', sans-serif;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(18, 140, 126, 0.1);
+            margin: 0 2px;
+        }
+
+        .cookies-header .lang-btn.active,
+        .cookies-header .lang-btn:hover {
+            background: #128C7E;
+            color: white;
+            border-color: #128C7E;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(18, 140, 126, 0.3);
+        }
+
+        /* Cookies container matching landing page style */
+        .cookies-container {
+            max-width: 900px;
+            margin: 8rem auto 3rem auto;
+            background: transparent;
+            padding: 2.4rem 2rem;
+        }
+
+        .cookies-container h1 {
+            font-family: 'Adobe Caslon Pro', serif;
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            font-style: italic;
+            color: #1A1A1A;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #666666;
+            font-size: var(--text-xs);
+            margin-bottom: 3rem;
+            font-style: italic;
+        }
+
+        .cookies-container h2 {
+            font-family: 'Adobe Caslon Pro', serif;
+            font-size: var(--text-lg);
+            font-weight: 700;
+            font-style: italic;
+            color: #1A1A1A;
+            margin: 2.5rem 0 1rem 0;
+            line-height: 1.3;
+        }
+
+        .cookies-container h3 {
+            font-family: 'Adobe Caslon Pro', serif;
+            font-size: var(--text-base);
+            font-weight: 700;
+            font-style: italic;
+            color: #1A1A1A;
+            margin: 2rem 0 1rem 0;
+            line-height: 1.4;
+        }
+
+        .cookies-container p {
+            margin-bottom: 1.2rem;
+            color: #2A2A2A;
+            line-height: 1.7;
+            font-size: var(--text-sm);
+        }
+
+        .cookies-container ul {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        .cookies-container li {
+            margin-bottom: 0.8rem;
+            color: #2A2A2A;
+            line-height: 1.6;
+            font-size: var(--text-sm);
+        }
+
+        .cookie-category {
+            background: #f8f9fa;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .cookie-category h4 {
+            font-family: 'Adobe Caslon Pro', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #128C7E;
+            margin-bottom: 0.8rem;
+        }
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .cookie-table th,
+        .cookie-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .cookie-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #333333;
+            font-family: 'Adobe Caslon Pro', serif;
+            font-style: italic;
+        }
+
+        .cookie-table td {
+            color: #555555;
+        }
+
+        .cookie-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            border-left: 4px solid #128C7E;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .contact-info h4 {
+            font-family: 'Adobe Caslon Pro', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-info a {
+            color: #128C7E;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .cookies-header nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            .cookies-header .nav-menu {
+                gap: 1rem;
+            }
+            
+            .cookies-container {
+                padding: 1.5rem 1rem;
+                margin: 6rem auto 2rem auto;
+            }
+
+            .cookies-container h1 {
+                font-size: var(--text-xl);
+            }
+
+            .cookies-container h2 {
+                font-size: var(--text-base);
+            }
+
+            .cookie-table {
+                font-size: 0.9rem;
+            }
+
+            .cookie-table th,
+            .cookie-table td {
+                padding: 0.8rem 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cookies-container {
+                padding: 1rem 0.8rem;
+                margin: 5rem auto 1rem auto;
+            }
+
+            .cookies-container h1 {
+                font-size: var(--text-lg);
+            }
+
+            .cookie-table {
+                font-size: 0.8rem;
+            }
+
+            .cookie-table th,
+            .cookie-table td {
+                padding: 0.6rem 0.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cookies-header">
+        <nav>
+            <div class="logo">
+                <img src="/logo.png" alt="AtiendeBot Logo">
+                <span class="logo-text">AtiendeBot</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="http://localhost:3000" onclick="navigateToSection('features')">Features</a></li>
+                <li><a href="http://localhost:3000" onclick="navigateToSection('use-cases')">Use Cases</a></li>
+                <li><a href="http://localhost:3000" onclick="navigateToSection('how-it-works')">How It Works</a></li>
+                <li><a href="http://localhost:3000" onclick="navigateToSection('faq')">FAQ</a></li>
+                <li><a href="http://localhost:3000" onclick="navigateToSection('contact')">Contact Us</a></li>
+                <li class="language-switcher">
+                    <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="switchLanguage('es')">ES</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="cookies-container">
+        <h1 data-i18n="cookies.title">Cookie Policy</h1>
+        <p class="last-updated" data-i18n="cookies.lastUpdated">Last updated: December 2024</p>
+
+            <h2 data-i18n="cookies.intro.title">What Are Cookies?</h2>
+            <p data-i18n="cookies.intro.description1">Cookies are small text files that are placed on your computer or mobile device when you visit our website. They are widely used to make websites work more efficiently and to provide information to website owners.</p>
+            <p data-i18n="cookies.intro.description2">AtiendeBot uses cookies to enhance your browsing experience, analyze website traffic, and provide personalized content. This Cookie Policy explains how we use cookies and similar technologies on our website.</p>
+
+            <h2 data-i18n="cookies.types.title">Types of Cookies We Use</h2>
+            
+            <div class="cookie-category">
+                <h4 data-i18n="cookies.types.essential.title">Essential Cookies</h4>
+                <p data-i18n="cookies.types.essential.description">These cookies are necessary for the website to function properly. They enable basic functions like page navigation, access to secure areas, and remembering your cookie preferences. The website cannot function properly without these cookies.</p>
+                <ul>
+                    <li data-i18n="cookies.types.essential.item1">Session management and security</li>
+                    <li data-i18n="cookies.types.essential.item2">Language preference storage</li>
+                    <li data-i18n="cookies.types.essential.item3">Cookie consent management</li>
+                </ul>
+            </div>
+
+            <div class="cookie-category">
+                <h4 data-i18n="cookies.types.analytics.title">Analytics Cookies</h4>
+                <p data-i18n="cookies.types.analytics.description">These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our website's performance and user experience.</p>
+                <ul>
+                    <li data-i18n="cookies.types.analytics.item1">Google Analytics for traffic analysis</li>
+                    <li data-i18n="cookies.types.analytics.item2">Page view tracking and user behavior</li>
+                    <li data-i18n="cookies.types.analytics.item3">Performance monitoring and optimization</li>
+                </ul>
+            </div>
+
+            <div class="cookie-category">
+                <h4 data-i18n="cookies.types.marketing.title">Marketing Cookies</h4>
+                <p data-i18n="cookies.types.marketing.description">These cookies are used to track visitors across websites to display relevant and engaging advertisements. They may be set by us or by third-party advertising partners.</p>
+                <ul>
+                    <li data-i18n="cookies.types.marketing.item1">Facebook Pixel for advertising optimization</li>
+                    <li data-i18n="cookies.types.marketing.item2">Conversion tracking and remarketing</li>
+                    <li data-i18n="cookies.types.marketing.item3">Social media integration and sharing</li>
+                </ul>
+            </div>
+
+            <div class="cookie-category">
+                <h4 data-i18n="cookies.types.functional.title">Functional Cookies</h4>
+                <p data-i18n="cookies.types.functional.description">These cookies enable enhanced functionality and personalization, such as remembering your preferences and settings. They may be set by us or by third-party providers whose services we have added to our pages.</p>
+                <ul>
+                    <li data-i18n="cookies.types.functional.item1">User interface preferences</li>
+                    <li data-i18n="cookies.types.functional.item2">Theme and display settings</li>
+                    <li data-i18n="cookies.types.functional.item3">Customized content delivery</li>
+                </ul>
+            </div>
+
+            <h2 data-i18n="cookies.details.title">Detailed Cookie Information</h2>
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="cookies.details.table.cookie">Cookie Name</th>
+                        <th data-i18n="cookies.details.table.purpose">Purpose</th>
+                        <th data-i18n="cookies.details.table.duration">Duration</th>
+                        <th data-i18n="cookies.details.table.type">Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cookieConsent</td>
+                        <td data-i18n="cookies.details.table.consent.purpose">Stores your cookie preferences</td>
+                        <td data-i18n="cookies.details.table.consent.duration">1 year</td>
+                        <td data-i18n="cookies.details.table.consent.type">Essential</td>
+                    </tr>
+                    <tr>
+                        <td>_ga</td>
+                        <td data-i18n="cookies.details.table.ga.purpose">Google Analytics - distinguishes users</td>
+                        <td data-i18n="cookies.details.table.ga.duration">2 years</td>
+                        <td data-i18n="cookies.details.table.ga.type">Analytics</td>
+                    </tr>
+                    <tr>
+                        <td>_gid</td>
+                        <td data-i18n="cookies.details.table.gid.purpose">Google Analytics - distinguishes users</td>
+                        <td data-i18n="cookies.details.table.gid.duration">24 hours</td>
+                        <td data-i18n="cookies.details.table.gid.type">Analytics</td>
+                    </tr>
+                    <tr>
+                        <td>_fbp</td>
+                        <td data-i18n="cookies.details.table.fbp.purpose">Facebook Pixel - tracks conversions</td>
+                        <td data-i18n="cookies.details.table.fbp.duration">3 months</td>
+                        <td data-i18n="cookies.details.table.fbp.type">Marketing</td>
+                    </tr>
+                    <tr>
+                        <td>user_preferences</td>
+                        <td data-i18n="cookies.details.table.prefs.purpose">Stores user interface preferences</td>
+                        <td data-i18n="cookies.details.table.prefs.duration">1 year</td>
+                        <td data-i18n="cookies.details.table.prefs.type">Functional</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 data-i18n="cookies.management.title">Managing Your Cookie Preferences</h2>
+            <p data-i18n="cookies.management.description1">You can control and manage cookies in several ways. Please note that removing or blocking cookies can impact your user experience and parts of our website may no longer be fully accessible.</p>
+            
+            <h3 data-i18n="cookies.management.browser.title">Browser Settings</h3>
+            <p data-i18n="cookies.management.browser.description">Most web browsers allow you to control cookies through their settings preferences. You can set your browser to refuse cookies or delete certain cookies.</p>
+            <ul>
+                <li data-i18n="cookies.management.browser.chrome">Google Chrome: Settings > Privacy and security > Cookies and other site data</li>
+                <li data-i18n="cookies.management.browser.firefox">Mozilla Firefox: Options > Privacy & Security > Cookies and Site Data</li>
+                <li data-i18n="cookies.management.browser.safari">Safari: Preferences > Privacy > Manage Website Data</li>
+                <li data-i18n="cookies.management.browser.edge">Microsoft Edge: Settings > Cookies and site permissions</li>
+            </ul>
+
+            <h3 data-i18n="cookies.management.website.title">Our Website Cookie Settings</h3>
+            <p data-i18n="cookies.management.website.description">You can manage your cookie preferences directly on our website using our cookie consent banner. You can change your preferences at any time by clicking the "Cookie Preferences" link in our footer.</p>
+
+            <h2 data-i18n="cookies.thirdParty.title">Third-Party Cookies</h2>
+            <p data-i18n="cookies.thirdParty.description">Some cookies on our website are set by third-party services. We have no control over these cookies and you should check the relevant third-party website for more information about their cookies and how to manage them.</p>
+            
+            <ul>
+                <li data-i18n="cookies.thirdParty.google">Google Analytics: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
+                <li data-i18n="cookies.thirdParty.facebook">Facebook: <a href="https://www.facebook.com/privacy/explanation" target="_blank" rel="noopener noreferrer">Facebook Data Policy</a></li>
+                <li data-i18n="cookies.thirdParty.fonts">Google Fonts: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
+            </ul>
+
+            <h2 data-i18n="cookies.updates.title">Updates to This Cookie Policy</h2>
+            <p data-i18n="cookies.updates.description">We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by posting the new Cookie Policy on this page.</p>
+
+            <div class="contact-info">
+                <h4 data-i18n="cookies.contact.title">Questions About Our Use of Cookies?</h4>
+                <p data-i18n="cookies.contact.description">If you have any questions about our use of cookies or this Cookie Policy, please contact us at <a href="mailto:atiendebot@gmail.com">atiendebot@gmail.com</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Language switching functionality
+        let currentLanguage = 'en';
+
+        const translations = {
+            en: {
+                cookies: {
+                    title: "Cookie Policy",
+                    lastUpdated: "Last updated: December 2024",
+                    intro: {
+                        title: "What Are Cookies?",
+                        description1: "Cookies are small text files that are placed on your computer or mobile device when you visit our website. They are widely used to make websites work more efficiently and to provide information to website owners.",
+                        description2: "AtiendeBot uses cookies to enhance your browsing experience, analyze website traffic, and provide personalized content. This Cookie Policy explains how we use cookies and similar technologies on our website."
+                    },
+                    types: {
+                        title: "Types of Cookies We Use",
+                        essential: {
+                            title: "Essential Cookies",
+                            description: "These cookies are necessary for the website to function properly. They enable basic functions like page navigation, access to secure areas, and remembering your cookie preferences. The website cannot function properly without these cookies.",
+                            item1: "Session management and security",
+                            item2: "Language preference storage",
+                            item3: "Cookie consent management"
+                        },
+                        analytics: {
+                            title: "Analytics Cookies",
+                            description: "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our website's performance and user experience.",
+                            item1: "Google Analytics for traffic analysis",
+                            item2: "Page view tracking and user behavior",
+                            item3: "Performance monitoring and optimization"
+                        },
+                        marketing: {
+                            title: "Marketing Cookies",
+                            description: "These cookies are used to track visitors across websites to display relevant and engaging advertisements. They may be set by us or by third-party advertising partners.",
+                            item1: "Facebook Pixel for advertising optimization",
+                            item2: "Conversion tracking and remarketing",
+                            item3: "Social media integration and sharing"
+                        },
+                        functional: {
+                            title: "Functional Cookies",
+                            description: "These cookies enable enhanced functionality and personalization, such as remembering your preferences and settings. They may be set by us or by third-party providers whose services we have added to our pages.",
+                            item1: "User interface preferences",
+                            item2: "Theme and display settings",
+                            item3: "Customized content delivery"
+                        }
+                    },
+                    details: {
+                        title: "Detailed Cookie Information",
+                        table: {
+                            cookie: "Cookie Name",
+                            purpose: "Purpose",
+                            duration: "Duration",
+                            type: "Type",
+                            consent: {
+                                purpose: "Stores your cookie preferences",
+                                duration: "1 year",
+                                type: "Essential"
+                            },
+                            ga: {
+                                purpose: "Google Analytics - distinguishes users",
+                                duration: "2 years",
+                                type: "Analytics"
+                            },
+                            gid: {
+                                purpose: "Google Analytics - distinguishes users",
+                                duration: "24 hours",
+                                type: "Analytics"
+                            },
+                            fbp: {
+                                purpose: "Facebook Pixel - tracks conversions",
+                                duration: "3 months",
+                                type: "Marketing"
+                            },
+                            prefs: {
+                                purpose: "Stores user interface preferences",
+                                duration: "1 year",
+                                type: "Functional"
+                            }
+                        }
+                    },
+                    management: {
+                        title: "Managing Your Cookie Preferences",
+                        description1: "You can control and manage cookies in several ways. Please note that removing or blocking cookies can impact your user experience and parts of our website may no longer be fully accessible.",
+                        browser: {
+                            title: "Browser Settings",
+                            description: "Most web browsers allow you to control cookies through their settings preferences. You can set your browser to refuse cookies or delete certain cookies.",
+                            chrome: "Google Chrome: Settings > Privacy and security > Cookies and other site data",
+                            firefox: "Mozilla Firefox: Options > Privacy & Security > Cookies and Site Data",
+                            safari: "Safari: Preferences > Privacy > Manage Website Data",
+                            edge: "Microsoft Edge: Settings > Cookies and site permissions"
+                        },
+                        website: {
+                            title: "Our Website Cookie Settings",
+                            description: "You can manage your cookie preferences directly on our website using our cookie consent banner. You can change your preferences at any time by clicking the \"Cookie Preferences\" link in our footer."
+                        }
+                    },
+                    thirdParty: {
+                        title: "Third-Party Cookies",
+                        description: "Some cookies on our website are set by third-party services. We have no control over these cookies and you should check the relevant third-party website for more information about their cookies and how to manage them.",
+                        google: "Google Analytics: Google Privacy Policy",
+                        facebook: "Facebook: Facebook Data Policy",
+                        fonts: "Google Fonts: Google Privacy Policy"
+                    },
+                    updates: {
+                        title: "Updates to This Cookie Policy",
+                        description: "We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by posting the new Cookie Policy on this page."
+                    },
+                    contact: {
+                        title: "Questions About Our Use of Cookies?",
+                        description: "If you have any questions about our use of cookies or this Cookie Policy, please contact us at atiendebot@gmail.com"
+                    }
+                },
+                nav: {
+                    features: "Features",
+                    useCases: "Use Cases",
+                    howItWorks: "How It Works",
+                    faq: "FAQ",
+                    contact: "Contact Us"
+                },
+                footer: {
+                    terms: "Terms and Conditions",
+                    privacy: "Privacy Policy",
+                    cookies: "Cookie Policy",
+                    rights: "All rights reserved."
+                }
+            },
+            es: {
+                cookies: {
+                    title: "Política de Cookies",
+                    lastUpdated: "Última actualización: Diciembre 2024",
+                    intro: {
+                        title: "¿Qué son las Cookies?",
+                        description1: "Las cookies son pequeños archivos de texto que se colocan en tu computadora o dispositivo móvil cuando visitas nuestro sitio web. Se utilizan ampliamente para hacer que los sitios web funcionen de manera más eficiente y para proporcionar información a los propietarios de sitios web.",
+                        description2: "AtiendeBot utiliza cookies para mejorar tu experiencia de navegación, analizar el tráfico del sitio web y proporcionar contenido personalizado. Esta Política de Cookies explica cómo utilizamos las cookies y tecnologías similares en nuestro sitio web."
+                    },
+                    types: {
+                        title: "Tipos de Cookies que Utilizamos",
+                        essential: {
+                            title: "Cookies Esenciales",
+                            description: "Estas cookies son necesarias para que el sitio web funcione correctamente. Permiten funciones básicas como la navegación de páginas, el acceso a áreas seguras y el recordar tus preferencias de cookies. El sitio web no puede funcionar correctamente sin estas cookies.",
+                            item1: "Gestión de sesiones y seguridad",
+                            item2: "Almacenamiento de preferencias de idioma",
+                            item3: "Gestión del consentimiento de cookies"
+                        },
+                        analytics: {
+                            title: "Cookies de Análisis",
+                            description: "Estas cookies nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web recopilando e informando información de forma anónima. Esto nos ayuda a mejorar el rendimiento y la experiencia del usuario de nuestro sitio web.",
+                            item1: "Google Analytics para análisis de tráfico",
+                            item2: "Seguimiento de vistas de página y comportamiento del usuario",
+                            item3: "Monitoreo de rendimiento y optimización"
+                        },
+                        marketing: {
+                            title: "Cookies de Marketing",
+                            description: "Estas cookies se utilizan para rastrear visitantes a través de sitios web para mostrar anuncios relevantes y atractivos. Pueden ser establecidas por nosotros o por socios publicitarios de terceros.",
+                            item1: "Facebook Pixel para optimización publicitaria",
+                            item2: "Seguimiento de conversiones y remarketing",
+                            item3: "Integración y compartir en redes sociales"
+                        },
+                        functional: {
+                            title: "Cookies Funcionales",
+                            description: "Estas cookies permiten funcionalidad mejorada y personalización, como recordar tus preferencias y configuraciones. Pueden ser establecidas por nosotros o por proveedores de terceros cuyos servicios hemos añadido a nuestras páginas.",
+                            item1: "Preferencias de interfaz de usuario",
+                            item2: "Configuraciones de tema y visualización",
+                            item3: "Entrega de contenido personalizado"
+                        }
+                    },
+                    details: {
+                        title: "Información Detallada de Cookies",
+                        table: {
+                            cookie: "Nombre de Cookie",
+                            purpose: "Propósito",
+                            duration: "Duración",
+                            type: "Tipo",
+                            consent: {
+                                purpose: "Almacena tus preferencias de cookies",
+                                duration: "1 año",
+                                type: "Esencial"
+                            },
+                            ga: {
+                                purpose: "Google Analytics - distingue usuarios",
+                                duration: "2 años",
+                                type: "Análisis"
+                            },
+                            gid: {
+                                purpose: "Google Analytics - distingue usuarios",
+                                duration: "24 horas",
+                                type: "Análisis"
+                            },
+                            fbp: {
+                                purpose: "Facebook Pixel - rastrea conversiones",
+                                duration: "3 meses",
+                                type: "Marketing"
+                            },
+                            prefs: {
+                                purpose: "Almacena preferencias de interfaz de usuario",
+                                duration: "1 año",
+                                type: "Funcional"
+                            }
+                        }
+                    },
+                    management: {
+                        title: "Gestionar tus Preferencias de Cookies",
+                        description1: "Puedes controlar y gestionar las cookies de varias maneras. Ten en cuenta que eliminar o bloquear cookies puede afectar tu experiencia de usuario y partes de nuestro sitio web pueden dejar de ser completamente accesibles.",
+                        browser: {
+                            title: "Configuración del Navegador",
+                            description: "La mayoría de los navegadores web te permiten controlar las cookies a través de sus preferencias de configuración. Puedes configurar tu navegador para rechazar cookies o eliminar ciertas cookies.",
+                            chrome: "Google Chrome: Configuración > Privacidad y seguridad > Cookies y otros datos del sitio",
+                            firefox: "Mozilla Firefox: Opciones > Privacidad y seguridad > Cookies y datos del sitio",
+                            safari: "Safari: Preferencias > Privacidad > Gestionar datos del sitio web",
+                            edge: "Microsoft Edge: Configuración > Cookies y permisos del sitio"
+                        },
+                        website: {
+                            title: "Configuración de Cookies de Nuestro Sitio Web",
+                            description: "Puedes gestionar tus preferencias de cookies directamente en nuestro sitio web usando nuestro banner de consentimiento de cookies. Puedes cambiar tus preferencias en cualquier momento haciendo clic en el enlace \"Preferencias de Cookies\" en nuestro pie de página."
+                        }
+                    },
+                    thirdParty: {
+                        title: "Cookies de Terceros",
+                        description: "Algunas cookies en nuestro sitio web son establecidas por servicios de terceros. No tenemos control sobre estas cookies y debes consultar el sitio web de terceros relevante para obtener más información sobre sus cookies y cómo gestionarlas.",
+                        google: "Google Analytics: Política de Privacidad de Google",
+                        facebook: "Facebook: Política de Datos de Facebook",
+                        fonts: "Google Fonts: Política de Privacidad de Google"
+                    },
+                    updates: {
+                        title: "Actualizaciones de esta Política de Cookies",
+                        description: "Podemos actualizar esta Política de Cookies de vez en cuando para reflejar cambios en nuestras prácticas o por otras razones operativas, legales o regulatorias. Te notificaremos de cualquier cambio material publicando la nueva Política de Cookies en esta página."
+                    },
+                    contact: {
+                        title: "¿Preguntas sobre nuestro uso de Cookies?",
+                        description: "Si tienes alguna pregunta sobre nuestro uso de cookies o esta Política de Cookies, por favor contáctanos en atiendebot@gmail.com"
+                    }
+                },
+                nav: {
+                    features: "Características",
+                    useCases: "Casos de Uso",
+                    howItWorks: "Cómo Funciona",
+                    faq: "Preguntas Frecuentes",
+                    contact: "Contáctanos"
+                },
+                footer: {
+                    terms: "Términos y Condiciones",
+                    privacy: "Política de Privacidad",
+                    cookies: "Política de Cookies",
+                    rights: "Todos los derechos reservados."
+                }
+            }
+        };
+
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Update content
+            updateContent();
+        }
+
+        function navigateToSection(sectionId) {
+            // Store the section to navigate to in localStorage
+            localStorage.setItem('navigateToSection', sectionId);
+            // Navigate to the main site
+            window.location.href = 'http://localhost:3000';
+        }
+
+        function updateContent() {
+            const t = translations[currentLanguage];
+            
+            // Update navigation
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            if (navLinks.length >= 5) {
+                navLinks[0].textContent = t.nav.features;
+                navLinks[1].textContent = t.nav.useCases;
+                navLinks[2].textContent = t.nav.howItWorks;
+                navLinks[3].textContent = t.nav.faq;
+                navLinks[4].textContent = t.nav.contact;
+            }
+            
+            // Update all elements with data-i18n attributes
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const keys = key.split('.');
+                let value = t;
+                
+                for (const k of keys) {
+                    if (value && value[k]) {
+                        value = value[k];
+                    } else {
+                        value = null;
+                        break;
+                    }
+                }
+                
+                if (value !== null) {
+                    element.textContent = value;
+                }
+            });
+        }
+
+        // Initialize language on page load
+        window.addEventListener('load', function() {
+            const savedLanguage = localStorage.getItem('preferredLanguage');
+            const browserLanguage = navigator.language.split('-')[0];
+            currentLanguage = savedLanguage || (browserLanguage === 'es' ? 'es' : 'en');
+            updateContent();
+            
+            // Set active language button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent === currentLanguage.toUpperCase()) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Check if we need to scroll to a section when the page loads
+            const sectionToNavigate = localStorage.getItem('navigateToSection');
+            if (sectionToNavigate) {
+                localStorage.removeItem('navigateToSection');
+                setTimeout(() => {
+                    const element = document.getElementById(sectionToNavigate);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 1000); // Wait for page to fully load
+            }
+        });
+    </script>
+</body>
+</html>

@@ -9,6 +9,7 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import SecondaryCTA from './components/SecondaryCTA';
 import Footer from './components/Footer';
+import CookieConsent from './components/CookieConsent';
 import { LanguageProvider } from './hooks/useLanguage';
 import { useAnimations } from './hooks/useAnimations';
 
@@ -28,6 +29,7 @@ function App() {
         <Contact />
         <SecondaryCTA />
         <Footer />
+        <CookieConsent />
       </div>
     </LanguageProvider>
   );

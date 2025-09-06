@@ -13,6 +13,7 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="faq">
+      <div className="section-divider"></div>
       <div className="container">
         <h2 data-aos="fade-up" data-aos-duration="1000">
           {t.faq.title}

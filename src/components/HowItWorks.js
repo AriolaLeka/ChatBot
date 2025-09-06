@@ -24,6 +24,7 @@ const HowItWorks = () => {
 
   return (
     <section id="how-it-works" className="how-it-works">
+      <div className="section-divider"></div>
       <div className="container">
         <h2 data-aos="fade-up" data-aos-duration="1000">
           {t.howItWorks.title}

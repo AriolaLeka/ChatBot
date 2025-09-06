@@ -6,6 +6,7 @@ const SecondaryCTA = () => {
 
   return (
     <section className="secondary-cta">
+      <div className="section-divider"></div>
       <div className="container">
         <div className="cta-content">
           <h2 data-aos="fade-up" data-aos-duration="1000">

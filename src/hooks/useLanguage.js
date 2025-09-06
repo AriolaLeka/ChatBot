@@ -33,6 +33,7 @@ export const LanguageProvider = ({ children }) => {
         features: "Features",
         howItWorks: "How It Works",
         useCases: "Use Cases",
+        customerJourney: "Customer Journey",
         testimonials: "Testimonials",
         faq: "FAQ",
         contact: "Contact Us"
@@ -41,6 +42,7 @@ export const LanguageProvider = ({ children }) => {
         title: "Transform Your Business with AI-Powered WhatsApp Receptionist",
         subtitle: "24/7 automated customer service, reservations, and support through WhatsApp",
         cta: "Get Started",
+        seeHowItWorks: "See How It Works",
         stats: {
           businesses: {
             number: "100+",
@@ -176,8 +178,48 @@ export const LanguageProvider = ({ children }) => {
       },
       footer: {
         tagline: "Your 24/7 AI Receptionist",
-        contact: "Contact",
+        contact: "Contact Us",
+        navigation: "Navigation",
+        legal: "Legal",
+        terms: "Terms and Conditions",
+        privacy: "Privacy Policy",
+        cookies: "Cookie Policy",
         rights: "All rights reserved."
+      },
+      cookies: {
+        banner: {
+          title: "We use cookies",
+          description: "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking 'Accept All', you consent to our use of cookies.",
+          accept: "Accept All",
+          decline: "Decline All",
+          preferences: "Cookie Preferences",
+          learnMore: "Learn more about our cookies"
+        },
+        preferences: {
+          title: "Cookie Preferences",
+          description: "Manage your cookie preferences. You can enable or disable different types of cookies below. Note that some cookies are essential for the website to function properly.",
+          savePreferences: "Save Preferences",
+          declineAll: "Decline All"
+        },
+        categories: {
+          essential: {
+            title: "Essential Cookies",
+            description: "These cookies are necessary for the website to function and cannot be switched off. They are usually only set in response to actions made by you which amount to a request for services."
+          },
+          analytics: {
+            title: "Analytics Cookies",
+            description: "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular."
+          },
+          marketing: {
+            title: "Marketing Cookies",
+            description: "These cookies may be set through our site by our advertising partners to build a profile of your interests and show you relevant adverts on other sites."
+          },
+          functional: {
+            title: "Functional Cookies",
+            description: "These cookies enable the website to provide enhanced functionality and personalisation. They may be set by us or by third party providers whose services we have added to our pages."
+          }
+        },
+        alwaysActive: "Always Active"
       }
     },
     es: {
@@ -185,6 +227,7 @@ export const LanguageProvider = ({ children }) => {
         features: "Características",
         howItWorks: "Cómo Funciona",
         useCases: "Casos de Uso",
+        customerJourney: "Viaje del Cliente",
         testimonials: "Testimonios",
         faq: "Preguntas Frecuentes",
         contact: "Contáctanos"
@@ -193,6 +236,7 @@ export const LanguageProvider = ({ children }) => {
         title: "Transforma tu Negocio con un Recepcionista de WhatsApp con IA",
         subtitle: "Servicio al cliente, reservas y soporte automatizado 24/7 a través de WhatsApp",
         cta: "Comenzar",
+        seeHowItWorks: "Ver Cómo Funciona",
         stats: {
           businesses: {
             number: "100+",
@@ -328,8 +372,48 @@ export const LanguageProvider = ({ children }) => {
       },
       footer: {
         tagline: "Tu Recepcionista IA 24/7",
-        contact: "Contacto",
+        contact: "Contáctanos",
+        navigation: "Navegación",
+        legal: "Legal",
+        terms: "Términos y Condiciones",
+        privacy: "Política de Privacidad",
+        cookies: "Política de Cookies",
         rights: "Todos los derechos reservados."
+      },
+      cookies: {
+        banner: {
+          title: "Utilizamos cookies",
+          description: "Utilizamos cookies para mejorar tu experiencia de navegación, ofrecer contenido personalizado y analizar nuestro tráfico. Al hacer clic en 'Aceptar Todo', consientes nuestro uso de cookies.",
+          accept: "Aceptar Todo",
+          decline: "Rechazar Todo",
+          preferences: "Preferencias de Cookies",
+          learnMore: "Aprende más sobre nuestras cookies"
+        },
+        preferences: {
+          title: "Preferencias de Cookies",
+          description: "Gestiona tus preferencias de cookies. Puedes habilitar o deshabilitar diferentes tipos de cookies a continuación. Ten en cuenta que algunas cookies son esenciales para el funcionamiento del sitio web.",
+          savePreferences: "Guardar Preferencias",
+          declineAll: "Rechazar Todo"
+        },
+        categories: {
+          essential: {
+            title: "Cookies Esenciales",
+            description: "Estas cookies son necesarias para el funcionamiento del sitio web y no se pueden desactivar. Normalmente solo se establecen en respuesta a acciones realizadas por ti que equivalen a una solicitud de servicios."
+          },
+          analytics: {
+            title: "Cookies de Análisis",
+            description: "Estas cookies nos permiten contar las visitas y las fuentes de tráfico para que podamos medir y mejorar el rendimiento de nuestro sitio. Nos ayudan a saber qué páginas son las más y menos populares."
+          },
+          marketing: {
+            title: "Cookies de Marketing",
+            description: "Estas cookies pueden ser establecidas en nuestro sitio por nuestros socios publicitarios para crear un perfil de tus intereses y mostrarte anuncios relevantes en otros sitios."
+          },
+          functional: {
+            title: "Cookies Funcionales",
+            description: "Estas cookies permiten que el sitio web proporcione funcionalidad mejorada y personalización. Pueden ser establecidas por nosotros o por proveedores de terceros cuyos servicios hemos añadido a nuestras páginas."
+          }
+        },
+        alwaysActive: "Siempre Activo"
       }
     }
   };

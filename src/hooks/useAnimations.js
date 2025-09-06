@@ -39,6 +39,26 @@ export const useAnimations = () => {
 
     // FAQ accordion functionality is now handled by React state
 
+    // Handle navigation from legal pages
+    const handleNavigationFromLegalPages = () => {
+      const sectionToNavigate = localStorage.getItem('navigateToSection');
+      if (sectionToNavigate) {
+        localStorage.removeItem('navigateToSection');
+        setTimeout(() => {
+          const element = document.getElementById(sectionToNavigate);
+          if (element) {
+            element.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }, 1000); // Wait for page to fully load
+      }
+    };
+
+    // Check for navigation on page load
+    handleNavigationFromLegalPages();
+
     // Form validation
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {

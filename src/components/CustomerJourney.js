@@ -24,6 +24,7 @@ const CustomerJourney = () => {
 
   return (
     <section className="customer-journey">
+      <div className="section-divider"></div>
       <div className="container">
         <h2 data-aos="fade-up" data-aos-duration="1000">
           {t.customerJourney.title}

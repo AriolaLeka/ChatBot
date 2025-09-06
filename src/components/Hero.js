@@ -36,7 +36,7 @@ const Hero = () => {
             </a>
             <a href="#how-it-works" className="cta-secondary">
               <i data-lucide="play-circle" className="cta-icon"></i>
-              See How It Works
+              {t.hero.seeHowItWorks}
             </a>
           </div>
           

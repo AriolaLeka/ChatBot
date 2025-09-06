@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | AtiendeBot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Adobe+Caslon+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Brandon+Grotesque:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Typography System - Matching Landing Page */
+        :root {
+            --text-xs: 0.875rem;    /* 14px - Small text */
+            --text-sm: 1rem;        /* 16px - Body text */
+            --text-base: 1.125rem;  /* 18px - Large body text */
+            --text-lg: 1.5rem;      /* 24px - Small headings */
+            --text-xl: 2rem;        /* 32px - Large headings */
+            --text-2xl: 3rem;       /* 48px - Hero headings */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Brandon Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            letter-spacing: 0.01em;
+            color: #2A2A2A;
+            background-color: #F0F2F5;
+            font-size: var(--text-sm);
+        }
+
+        /* Header matching landing page */
+        .privacy-header {
+            background-color: transparent;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 0.5rem 1rem 0 1rem;
+        }
+
+        .privacy-header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 2rem;
+            max-width: calc(100% - 2rem);
+            margin: 0 auto;
+            min-height: 70px;
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .privacy-header .logo {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .privacy-header .logo img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            object-fit: contain;
+            background: transparent;
+        }
+
+        .privacy-header .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #128C7E;
+            margin-left: 1rem;
+            letter-spacing: 1px;
+            font-family: 'Brandon Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Privacy container matching landing page style */
+        .privacy-container {
+            max-width: 900px;
+            margin: 8rem auto 3rem auto;
+            background: transparent;
+            padding: 2.4rem 2rem;
+        }
+
+        .privacy-container h1 {
+            font-family: 'Adobe Caslon Pro', serif;
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            font-style: italic;
+            color: #1A1A1A;
+            margin-bottom: 2.4rem;
+            text-align: center;
+        }
+
+        .privacy-container h2 {
+            font-family: 'Adobe Caslon Pro', serif;
+            font-size: var(--text-lg);
+            font-weight: 600;
+            font-style: italic;
+            color: #1A1A1A;
+            margin-top: 2.4rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .privacy-container p, .privacy-container li {
+            font-family: 'Brandon Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: var(--text-sm);
+            color: #2A2A2A;
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .privacy-container ul {
+            margin-left: 1.6rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .privacy-container a {
+            color: #128C7E;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .privacy-container a:hover {
+            color: #0F7A6B;
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: rgba(18, 140, 126, 0.05);
+            border-left: 4px solid #128C7E;
+            padding: 1.6rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        /* Navigation Menu - Matching Main Site */
+        .privacy-header .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .privacy-header .nav-menu li {
+            margin: 0;
+        }
+
+        .privacy-header .nav-menu a {
+            text-decoration: none;
+            color: #2A2A2A;
+            font-weight: 500;
+            font-size: 1.08rem;
+            transition: color 0.3s ease;
+        }
+
+        .privacy-header .nav-menu a:hover {
+            color: #2A4A5A;
+        }
+
+        .privacy-header .language-switcher {
+            display: flex;
+            gap: 0.5rem;
+            margin-left: 1rem;
+        }
+
+        .privacy-header .lang-btn {
+            background: transparent;
+            border: 1px solid #128C7E;
+            color: #128C7E;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: var(--text-xs);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .privacy-header .lang-btn.active,
+        .privacy-header .lang-btn:hover {
+            background: #128C7E;
+            color: white;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .privacy-container {
+                padding: 1.6rem 1rem;
+                margin: 0 auto 2rem auto;
+            }
+            
+            .privacy-container h1 {
+                font-size: var(--text-xl);
+            }
+            
+            .privacy-container h2 {
+                font-size: var(--text-base);
+            }
+
+            .highlight-box {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="privacy-header">
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="AtiendeBot Logo">
+                <span class="logo-text">AtiendeBot</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="http://localhost:3000" onclick="navigateToSection('features')">Features</a></li>
+                <li><a href="http://localhost:3000" onclick="navigateToSection('use-cases')">Use Cases</a></li>
+                <li><a href="http://localhost:3000" onclick="navigateToSection('how-it-works')">How It Works</a></li>
+                <li><a href="http://localhost:3000" onclick="navigateToSection('faq')">FAQ</a></li>
+                <li><a href="http://localhost:3000" onclick="navigateToSection('contact')">Contact Us</a></li>
+                <li class="language-switcher">
+                    <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="switchLanguage('es')">ES</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="privacy-container">
+        <h1 data-i18n="privacy.title">Privacy Policy</h1>
+        
+        <div class="highlight-box">
+            <p><strong data-i18n="privacy.lastUpdated">Last Updated:</strong> December 2024</p>
+            <p data-i18n="privacy.intro">AtiendeBot is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you use our AI-powered WhatsApp receptionist service.</p>
+        </div>
+
+        <h2 data-i18n="privacy.section1.title">1. Information We Collect</h2>
+        <p data-i18n="privacy.section1.intro">We collect information necessary to provide and improve our AtiendeBot service:</p>
+        <ul>
+            <li data-i18n="privacy.section1.item1"><strong>Business Information:</strong> Company name, business type, contact details, and service preferences</li>
+            <li data-i18n="privacy.section1.item2"><strong>WhatsApp Data:</strong> Messages, customer inquiries, and interactions processed through our AI system</li>
+            <li data-i18n="privacy.section1.item3"><strong>Usage Data:</strong> Service performance metrics, response times, and feature utilization</li>
+            <li data-i18n="privacy.section1.item4"><strong>Technical Data:</strong> Device information, IP addresses, and system logs for service optimization</li>
+            <li data-i18n="privacy.section1.item5"><strong>Communication Records:</strong> Support tickets, feedback, and correspondence with our team</li>
+        </ul>
+
+        <h2 data-i18n="privacy.section2.title">2. How We Use Your Information</h2>
+        <p data-i18n="privacy.section2.intro">We use the collected information to:</p>
+        <ul>
+            <li data-i18n="privacy.section2.item1">Provide and maintain the AtiendeBot AI receptionist service</li>
+            <li data-i18n="privacy.section2.item2">Process customer inquiries and automate responses via WhatsApp</li>
+            <li data-i18n="privacy.section2.item3">Improve our AI algorithms and service performance</li>
+            <li data-i18n="privacy.section2.item4">Provide customer support and technical assistance</li>
+            <li data-i18n="privacy.section2.item5">Send important service updates and notifications</li>
+            <li data-i18n="privacy.section2.item6">Ensure compliance with legal obligations and service terms</li>
+        </ul>
+
+        <h2 data-i18n="privacy.section3.title">3. Data Processing and AI Technology</h2>
+        <p data-i18n="privacy.section3.intro">AtiendeBot uses artificial intelligence to process and respond to customer messages:</p>
+        <ul>
+            <li data-i18n="privacy.section3.item1">Messages are analyzed by our AI system to understand customer intent</li>
+            <li data-i18n="privacy.section3.item2">Automated responses are generated based on your business configuration</li>
+            <li data-i18n="privacy.section3.item3">Customer data is processed in real-time to provide immediate assistance</li>
+            <li data-i18n="privacy.section3.item4">All AI processing is designed to respect customer privacy and data protection</li>
+        </ul>
+
+        <h2 data-i18n="privacy.section4.title">4. Data Sharing and Third Parties</h2>
+        <p data-i18n="privacy.section4.intro">We do not sell, trade, or rent your personal information to third parties. We may share data only in these limited circumstances:</p>
+        <ul>
+            <li data-i18n="privacy.section4.item1"><strong>WhatsApp Integration:</strong> Necessary data sharing with WhatsApp Business API for service functionality</li>
+            <li data-i18n="privacy.section4.item2"><strong>Service Providers:</strong> Trusted partners who assist in providing our service (hosting, analytics, support)</li>
+            <li data-i18n="privacy.section4.item3"><strong>Legal Requirements:</strong> When required by law, court order, or to protect our rights and safety</li>
+            <li data-i18n="privacy.section4.item4"><strong>Business Transfers:</strong> In case of merger, acquisition, or sale of business assets</li>
+        </ul>
+
+        <h2 data-i18n="privacy.section5.title">5. Data Security</h2>
+        <p data-i18n="privacy.section5.intro">We implement comprehensive security measures to protect your information:</p>
+        <ul>
+            <li data-i18n="privacy.section5.item1">End-to-end encryption for all data transmission</li>
+            <li data-i18n="privacy.section5.item2">Secure cloud infrastructure with regular security audits</li>
+            <li data-i18n="privacy.section5.item3">Access controls and authentication protocols</li>
+            <li data-i18n="privacy.section5.item4">Regular data backups and disaster recovery procedures</li>
+            <li data-i18n="privacy.section5.item5">Employee training on data protection and privacy practices</li>
+        </ul>
+
+        <h2 data-i18n="privacy.section6.title">6. Data Retention</h2>
+        <p data-i18n="privacy.section6.intro">We retain your information only as long as necessary:</p>
+        <ul>
+            <li data-i18n="privacy.section6.item1"><strong>Active Service:</strong> Data is retained while your AtiendeBot service is active</li>
+            <li data-i18n="privacy.section6.item2"><strong>Business Records:</strong> Transaction and service records kept for legal and accounting purposes</li>
+            <li data-i18n="privacy.section6.item3"><strong>Customer Messages:</strong> WhatsApp conversation data retained according to your business needs</li>
+            <li data-i18n="privacy.section6.item4"><strong>Deletion:</strong> Data is securely deleted when no longer needed or upon service termination</li>
+        </ul>
+
+        <h2 data-i18n="privacy.section7.title">7. Your Rights and Choices</h2>
+        <p data-i18n="privacy.section7.intro">You have the following rights regarding your personal information:</p>
+        <ul>
+            <li data-i18n="privacy.section7.item1"><strong>Access:</strong> Request a copy of the personal information we hold about you</li>
+            <li data-i18n="privacy.section7.item2"><strong>Correction:</strong> Update or correct inaccurate personal information</li>
+            <li data-i18n="privacy.section7.item3"><strong>Deletion:</strong> Request deletion of your personal information (subject to legal requirements)</li>
+            <li data-i18n="privacy.section7.item4"><strong>Portability:</strong> Request transfer of your data to another service provider</li>
+            <li data-i18n="privacy.section7.item5"><strong>Opt-out:</strong> Unsubscribe from marketing communications at any time</li>
+        </ul>
+
+        <h2 data-i18n="privacy.section8.title">8. International Data Transfers</h2>
+        <p data-i18n="privacy.section8.intro">Your data may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place to protect your information during international transfers, including:</p>
+        <ul>
+            <li data-i18n="privacy.section8.item1">Standard contractual clauses approved by relevant data protection authorities</li>
+            <li data-i18n="privacy.section8.item2">Adequacy decisions for countries with equivalent data protection standards</li>
+            <li data-i18n="privacy.section8.item3">Other appropriate safeguards as required by applicable privacy laws</li>
+        </ul>
+
+        <h2 data-i18n="privacy.section9.title">9. Children's Privacy</h2>
+        <p data-i18n="privacy.section9.content">AtiendeBot is designed for business use and is not intended for children under 16. We do not knowingly collect personal information from children. If we become aware that we have collected such information, we will take steps to delete it promptly.</p>
+
+        <h2 data-i18n="privacy.section10.title">10. Changes to This Privacy Policy</h2>
+        <p data-i18n="privacy.section10.intro">We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by:</p>
+        <ul>
+            <li data-i18n="privacy.section10.item1">Posting the updated policy on our website</li>
+            <li data-i18n="privacy.section10.item2">Sending email notifications to registered users</li>
+            <li data-i18n="privacy.section10.item3">Providing notice through the AtiendeBot service interface</li>
+        </ul>
+
+        <h2 data-i18n="privacy.section11.title">11. Contact Information</h2>
+        <p data-i18n="privacy.section11.intro">If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+        <ul>
+            <li data-i18n="privacy.section11.item1"><strong>Email:</strong> <a href="mailto:atiendebot@gmail.com">atiendebot@gmail.com</a></li>
+            <li data-i18n="privacy.section11.item2"><strong>Subject Line:</strong> Privacy Policy Inquiry</li>
+        </ul>
+        <p data-i18n="privacy.section11.response">We will respond to your inquiry within 30 days of receipt.</p>
+
+        <div class="highlight-box">
+            <p data-i18n="privacy.footer"><strong>Your Privacy Matters:</strong> We are committed to transparency and protecting your privacy. This policy reflects our dedication to responsible data handling and your right to privacy in the digital age.</p>
+        </div>
+    </div>
+
+    <script>
+        // Translation system
+        const translations = {
+            en: {
+                nav: {
+                    features: "Features",
+                    useCases: "Use Cases",
+                    howItWorks: "How It Works",
+                    faq: "FAQ",
+                    contact: "Contact Us"
+                },
+                privacy: {
+                    title: "Privacy Policy",
+                    lastUpdated: "Last Updated:",
+                    intro: "AtiendeBot is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you use our AI-powered WhatsApp receptionist service.",
+                    section1: {
+                        title: "1. Information We Collect",
+                        intro: "We collect information necessary to provide and improve our AtiendeBot service:",
+                        item1: "Business Information: Company name, business type, contact details, and service preferences",
+                        item2: "WhatsApp Data: Messages, customer inquiries, and interactions processed through our AI system",
+                        item3: "Usage Data: Service performance metrics, response times, and feature utilization",
+                        item4: "Technical Data: Device information, IP addresses, and system logs for service optimization",
+                        item5: "Communication Records: Support tickets, feedback, and correspondence with our team"
+                    },
+                    section2: {
+                        title: "2. How We Use Your Information",
+                        intro: "We use the collected information to:",
+                        item1: "Provide and maintain the AtiendeBot AI receptionist service",
+                        item2: "Process customer inquiries and automate responses via WhatsApp",
+                        item3: "Improve our AI algorithms and service performance",
+                        item4: "Provide customer support and technical assistance",
+                        item5: "Send important service updates and notifications",
+                        item6: "Ensure compliance with legal obligations and service terms"
+                    },
+                    section3: {
+                        title: "3. Data Processing and AI Technology",
+                        intro: "AtiendeBot uses artificial intelligence to process and respond to customer messages:",
+                        item1: "Messages are analyzed by our AI system to understand customer intent",
+                        item2: "Automated responses are generated based on your business configuration",
+                        item3: "Customer data is processed in real-time to provide immediate assistance",
+                        item4: "All AI processing is designed to respect customer privacy and data protection"
+                    },
+                    section4: {
+                        title: "4. Data Sharing and Third Parties",
+                        intro: "We do not sell, trade, or rent your personal information to third parties. We may share data only in these limited circumstances:",
+                        item1: "WhatsApp Integration: Necessary data sharing with WhatsApp Business API for service functionality",
+                        item2: "Service Providers: Trusted partners who assist in providing our service (hosting, analytics, support)",
+                        item3: "Legal Requirements: When required by law, court order, or to protect our rights and safety",
+                        item4: "Business Transfers: In case of merger, acquisition, or sale of business assets"
+                    },
+                    section5: {
+                        title: "5. Data Security",
+                        intro: "We implement comprehensive security measures to protect your information:",
+                        item1: "End-to-end encryption for all data transmission",
+                        item2: "Secure cloud infrastructure with regular security audits",
+                        item3: "Access controls and authentication protocols",
+                        item4: "Regular data backups and disaster recovery procedures",
+                        item5: "Employee training on data protection and privacy practices"
+                    },
+                    section6: {
+                        title: "6. Data Retention",
+                        intro: "We retain your information only as long as necessary:",
+                        item1: "Active Service: Data is retained while your AtiendeBot service is active",
+                        item2: "Business Records: Transaction and service records kept for legal and accounting purposes",
+                        item3: "Customer Messages: WhatsApp conversation data retained according to your business needs",
+                        item4: "Deletion: Data is securely deleted when no longer needed or upon service termination"
+                    },
+                    section7: {
+                        title: "7. Your Rights and Choices",
+                        intro: "You have the following rights regarding your personal information:",
+                        item1: "Access: Request a copy of the personal information we hold about you",
+                        item2: "Correction: Update or correct inaccurate personal information",
+                        item3: "Deletion: Request deletion of your personal information (subject to legal requirements)",
+                        item4: "Portability: Request transfer of your data to another service provider",
+                        item5: "Opt-out: Unsubscribe from marketing communications at any time"
+                    },
+                    section8: {
+                        title: "8. International Data Transfers",
+                        intro: "Your data may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place to protect your information during international transfers, including:",
+                        item1: "Standard contractual clauses approved by relevant data protection authorities",
+                        item2: "Adequacy decisions for countries with equivalent data protection standards",
+                        item3: "Other appropriate safeguards as required by applicable privacy laws"
+                    },
+                    section9: {
+                        title: "9. Children's Privacy",
+                        content: "AtiendeBot is designed for business use and is not intended for children under 16. We do not knowingly collect personal information from children. If we become aware that we have collected such information, we will take steps to delete it promptly."
+                    },
+                    section10: {
+                        title: "10. Changes to This Privacy Policy",
+                        intro: "We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by:",
+                        item1: "Posting the updated policy on our website",
+                        item2: "Sending email notifications to registered users",
+                        item3: "Providing notice through the AtiendeBot service interface"
+                    },
+                    section11: {
+                        title: "11. Contact Information",
+                        intro: "If you have any questions about this Privacy Policy or our data practices, please contact us:",
+                        item1: "Email: atiendebot@gmail.com",
+                        item2: "Subject Line: Privacy Policy Inquiry",
+                        response: "We will respond to your inquiry within 30 days of receipt."
+                    },
+                    footer: "Your Privacy Matters: We are committed to transparency and protecting your privacy. This policy reflects our dedication to responsible data handling and your right to privacy in the digital age."
+                }
+            },
+            es: {
+                nav: {
+                    features: "Características",
+                    useCases: "Casos de Uso",
+                    howItWorks: "Cómo Funciona",
+                    faq: "Preguntas Frecuentes",
+                    contact: "Contáctanos"
+                },
+                privacy: {
+                    title: "Política de Privacidad",
+                    lastUpdated: "Última Actualización:",
+                    intro: "AtiendeBot está comprometido a proteger tu privacidad y garantizar la seguridad de tu información personal. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos tus datos cuando utilizas nuestro servicio de recepcionista IA para WhatsApp.",
+                    section1: {
+                        title: "1. Información que Recopilamos",
+                        intro: "Recopilamos información necesaria para proporcionar y mejorar nuestro servicio AtiendeBot:",
+                        item1: "Información Comercial: Nombre de la empresa, tipo de negocio, datos de contacto y preferencias de servicio",
+                        item2: "Datos de WhatsApp: Mensajes, consultas de clientes e interacciones procesadas a través de nuestro sistema IA",
+                        item3: "Datos de Uso: Métricas de rendimiento del servicio, tiempos de respuesta y utilización de funciones",
+                        item4: "Datos Técnicos: Información del dispositivo, direcciones IP y registros del sistema para optimización del servicio",
+                        item5: "Registros de Comunicación: Tickets de soporte, comentarios y correspondencia con nuestro equipo"
+                    },
+                    section2: {
+                        title: "2. Cómo Usamos tu Información",
+                        intro: "Usamos la información recopilada para:",
+                        item1: "Proporcionar y mantener el servicio de recepcionista IA AtiendeBot",
+                        item2: "Procesar consultas de clientes y automatizar respuestas vía WhatsApp",
+                        item3: "Mejorar nuestros algoritmos IA y rendimiento del servicio",
+                        item4: "Proporcionar soporte al cliente y asistencia técnica",
+                        item5: "Enviar actualizaciones importantes del servicio y notificaciones",
+                        item6: "Asegurar el cumplimiento de obligaciones legales y términos del servicio"
+                    },
+                    section3: {
+                        title: "3. Procesamiento de Datos y Tecnología IA",
+                        intro: "AtiendeBot utiliza inteligencia artificial para procesar y responder a mensajes de clientes:",
+                        item1: "Los mensajes son analizados por nuestro sistema IA para entender la intención del cliente",
+                        item2: "Las respuestas automatizadas se generan basadas en tu configuración comercial",
+                        item3: "Los datos del cliente se procesan en tiempo real para proporcionar asistencia inmediata",
+                        item4: "Todo el procesamiento IA está diseñado para respetar la privacidad del cliente y la protección de datos"
+                    },
+                    section4: {
+                        title: "4. Compartir Datos y Terceros",
+                        intro: "No vendemos, intercambiamos o alquilamos tu información personal a terceros. Solo podemos compartir datos en estas circunstancias limitadas:",
+                        item1: "Integración WhatsApp: Compartir datos necesarios con la API de WhatsApp Business para funcionalidad del servicio",
+                        item2: "Proveedores de Servicio: Socios de confianza que ayudan a proporcionar nuestro servicio (hosting, análisis, soporte)",
+                        item3: "Requisitos Legales: Cuando sea requerido por ley, orden judicial o para proteger nuestros derechos y seguridad",
+                        item4: "Transferencias Comerciales: En caso de fusión, adquisición o venta de activos comerciales"
+                    },
+                    section5: {
+                        title: "5. Seguridad de Datos",
+                        intro: "Implementamos medidas de seguridad integrales para proteger tu información:",
+                        item1: "Cifrado de extremo a extremo para toda transmisión de datos",
+                        item2: "Infraestructura de nube segura con auditorías de seguridad regulares",
+                        item3: "Controles de acceso y protocolos de autenticación",
+                        item4: "Copias de seguridad regulares de datos y procedimientos de recuperación ante desastres",
+                        item5: "Capacitación de empleados en protección de datos y prácticas de privacidad"
+                    },
+                    section6: {
+                        title: "6. Retención de Datos",
+                        intro: "Retenemos tu información solo durante el tiempo necesario:",
+                        item1: "Servicio Activo: Los datos se retienen mientras tu servicio AtiendeBot esté activo",
+                        item2: "Registros Comerciales: Registros de transacciones y servicios mantenidos para propósitos legales y contables",
+                        item3: "Mensajes de Clientes: Datos de conversaciones de WhatsApp retenidos según las necesidades de tu negocio",
+                        item4: "Eliminación: Los datos se eliminan de forma segura cuando ya no son necesarios o al terminar el servicio"
+                    },
+                    section7: {
+                        title: "7. Tus Derechos y Opciones",
+                        intro: "Tienes los siguientes derechos respecto a tu información personal:",
+                        item1: "Acceso: Solicitar una copia de la información personal que tenemos sobre ti",
+                        item2: "Corrección: Actualizar o corregir información personal inexacta",
+                        item3: "Eliminación: Solicitar eliminación de tu información personal (sujeto a requisitos legales)",
+                        item4: "Portabilidad: Solicitar transferencia de tus datos a otro proveedor de servicios",
+                        item5: "Exclusión: Darte de baja de comunicaciones de marketing en cualquier momento"
+                    },
+                    section8: {
+                        title: "8. Transferencias Internacionales de Datos",
+                        intro: "Tus datos pueden ser transferidos y procesados en países distintos al tuyo. Nos aseguramos de que existan salvaguardas apropiadas para proteger tu información durante transferencias internacionales, incluyendo:",
+                        item1: "Cláusulas contractuales estándar aprobadas por autoridades relevantes de protección de datos",
+                        item2: "Decisiones de adecuación para países con estándares equivalentes de protección de datos",
+                        item3: "Otras salvaguardas apropiadas según lo requieran las leyes de privacidad aplicables"
+                    },
+                    section9: {
+                        title: "9. Privacidad de Menores",
+                        content: "AtiendeBot está diseñado para uso comercial y no está destinado a niños menores de 16 años. No recopilamos conscientemente información personal de niños. Si nos damos cuenta de que hemos recopilado dicha información, tomaremos medidas para eliminarla rápidamente."
+                    },
+                    section10: {
+                        title: "10. Cambios a esta Política de Privacidad",
+                        intro: "Podemos actualizar esta Política de Privacidad de vez en cuando para reflejar cambios en nuestras prácticas o requisitos legales. Te notificaremos de cualquier cambio material mediante:",
+                        item1: "Publicar la política actualizada en nuestro sitio web",
+                        item2: "Enviar notificaciones por correo electrónico a usuarios registrados",
+                        item3: "Proporcionar aviso a través de la interfaz del servicio AtiendeBot"
+                    },
+                    section11: {
+                        title: "11. Información de Contacto",
+                        intro: "Si tienes alguna pregunta sobre esta Política de Privacidad o nuestras prácticas de datos, por favor contáctanos:",
+                        item1: "Correo Electrónico: atiendebot@gmail.com",
+                        item2: "Línea de Asunto: Consulta sobre Política de Privacidad",
+                        response: "Responderemos a tu consulta dentro de 30 días de recibirla."
+                    },
+                    footer: "Tu Privacidad Importa: Estamos comprometidos con la transparencia y proteger tu privacidad. Esta política refleja nuestra dedicación al manejo responsable de datos y tu derecho a la privacidad en la era digital."
+                }
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('preferredLanguage', lang);
+            updateContent();
+            updateLanguageButtons();
+        }
+
+        function updateContent() {
+            const t = translations[currentLanguage];
+            
+            // Update navigation
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            if (navLinks.length >= 5) {
+                navLinks[0].textContent = t.nav.features;
+                navLinks[1].textContent = t.nav.useCases;
+                navLinks[2].textContent = t.nav.howItWorks;
+                navLinks[3].textContent = t.nav.faq;
+                navLinks[4].textContent = t.nav.contact;
+            }
+            
+            // Update all elements with data-i18n attributes
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const keys = key.split('.');
+                let value = t;
+                
+                // Navigate through the nested object
+                for (let k of keys) {
+                    if (value && value[k] !== undefined) {
+                        value = value[k];
+                    } else {
+                        value = null;
+                        break;
+                    }
+                }
+                
+                if (value !== null) {
+                    element.textContent = value;
+                }
+            });
+        }
+
+        function updateLanguageButtons() {
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if ((btn.textContent === 'EN' && currentLanguage === 'en') || 
+                    (btn.textContent === 'ES' && currentLanguage === 'es')) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        function navigateToSection(sectionId) {
+            // Store the section to navigate to in localStorage
+            localStorage.setItem('navigateToSection', sectionId);
+            // Navigate to the main site
+            window.location.href = 'http://localhost:3000';
+        }
+
+        // Initialize language on page load
+        window.addEventListener('load', function() {
+            const savedLanguage = localStorage.getItem('preferredLanguage');
+            const browserLanguage = navigator.language.split('-')[0];
+            currentLanguage = savedLanguage || (browserLanguage === 'es' ? 'es' : 'en');
+            updateContent();
+            updateLanguageButtons();
+
+            // Check if we need to scroll to a section when the page loads
+            const sectionToNavigate = localStorage.getItem('navigateToSection');
+            if (sectionToNavigate) {
+                localStorage.removeItem('navigateToSection');
+                setTimeout(() => {
+                    const element = document.getElementById(sectionToNavigate);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 1000); // Wait for page to fully load
+            }
+        });
+    </script>
+</body>
+</html>
