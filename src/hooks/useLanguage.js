@@ -138,11 +138,11 @@ export const LanguageProvider = ({ children }) => {
           },
           {
             question: "Can the bot handle multiple languages?",
-            answer: "Yes! AtiendeBot supports multiple languages including English, Spanish, Portuguese, and more. You can configure different languages for different customer segments."
+            answer: "Yes! AtiendeBot handles Spanish and English by default, but can be configured for other languages upon request. We can set up different languages for different customer segments as needed."
           },
           {
-            question: "What happens when the bot can't answer a question?",
-            answer: "When AtiendeBot encounters a question it can't handle, it automatically escalates the conversation to a human agent. You'll receive a notification to take over the conversation."
+            question: "How customizable is AtiendeBot for my business?",
+            answer: "AtiendeBot is highly customizable to match your business needs. We can configure the bot's responses, integrate with your existing systems, and tailor the conversation flow to your specific requirements and industry."
           },
           {
             question: "Is there a contract or can I cancel anytime?",
@@ -168,7 +168,10 @@ export const LanguageProvider = ({ children }) => {
           },
           message: "Message *",
           messagePlaceholder: "Tell us about your business and how we can help...",
-          submit: "Send Message"
+          submit: "Send Message",
+          submitting: "Sending...",
+          successMessage: "Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.",
+          errorMessage: "Sorry, there was an error sending your message. Please try again or contact us directly at atiendebot@gmail.com"
         }
       },
       secondaryCta: {
@@ -332,11 +335,11 @@ export const LanguageProvider = ({ children }) => {
           },
           {
             question: "¿Puede el bot manejar múltiples idiomas?",
-            answer: "¡Sí! AtiendeBot soporta múltiples idiomas incluyendo inglés, español, portugués y más. Puedes configurar diferentes idiomas para diferentes segmentos de clientes."
+            answer: "¡Sí! AtiendeBot maneja español e inglés por defecto, pero puede configurarse para otros idiomas bajo solicitud. Podemos configurar diferentes idiomas para diferentes segmentos de clientes según sea necesario."
           },
           {
-            question: "¿Qué pasa cuando el bot no puede responder una pregunta?",
-            answer: "Cuando AtiendeBot encuentra una pregunta que no puede manejar, automáticamente escala la conversación a un agente humano. Recibirás una notificación para tomar el control de la conversación."
+            question: "¿Qué tan personalizable es AtiendeBot para mi negocio?",
+            answer: "AtiendeBot es altamente personalizable para adaptarse a las necesidades de tu negocio. Podemos configurar las respuestas del bot, integrarlo con tus sistemas existentes y adaptar el flujo de conversación a tus requisitos específicos e industria."
           },
           {
             question: "¿Hay contrato o puedo cancelar en cualquier momento?",
@@ -362,7 +365,10 @@ export const LanguageProvider = ({ children }) => {
           },
           message: "Mensaje *",
           messagePlaceholder: "Cuéntanos sobre tu negocio y cómo podemos ayudarte...",
-          submit: "Enviar Mensaje"
+          submit: "Enviar Mensaje",
+          submitting: "Enviando...",
+          successMessage: "¡Gracias! Tu mensaje ha sido enviado exitosamente. Te responderemos dentro de 24 horas.",
+          errorMessage: "Lo sentimos, hubo un error al enviar tu mensaje. Por favor intenta de nuevo o contáctanos directamente a atiendebot@gmail.com"
         }
       },
       secondaryCta: {

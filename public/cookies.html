@@ -141,6 +141,81 @@
             box-shadow: 0 4px 8px rgba(18, 140, 126, 0.3);
         }
 
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 30px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-line {
+            width: 100%;
+            height: 3px;
+            background-color: #1A1A1A;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        /* Mobile Menu Button Animation */
+        .mobile-menu-btn.active .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+            background-color: #2A4A5A;
+        }
+
+        .mobile-menu-btn.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .mobile-menu-btn.active .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+            background-color: #2A4A5A;
+        }
+
+        .mobile-menu-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile menu overlay */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-menu-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Mobile menu slide-in animation */
+        @keyframes slideInFromRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
         /* Cookies container matching landing page style */
         .cookies-container {
             max-width: 900px;
@@ -284,18 +359,193 @@
         }
 
 
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
+        /* Mobile Navigation */
+        @media (max-width: 900px) {
+            /* Show mobile menu button */
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            /* Hide logo on mobile */
+            .cookies-header .logo {
+                display: none;
+            }
+            
+            /* Position hamburger button on the right with minimal background */
             .cookies-header nav {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1rem;
+                justify-content: flex-end;
+                padding: 0.75rem 1.5rem;
+                margin: 0.5rem;
+                max-width: calc(100% - 1rem);
+                min-height: 60px;
+                background-color: transparent;
+                box-shadow: none;
+                border-radius: 0;
             }
             
+            /* Hide desktop navigation */
             .cookies-header .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 300px;
+                height: 100vh;
+                background-color: #fff;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: stretch;
+                padding: 90px 2rem 2rem;
+                gap: 0;
+                transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                box-shadow: -8px 0 30px rgba(0,0,0,0.15);
+                z-index: 1000;
+                overflow-y: auto;
+                border-radius: 0 0 0 20px;
+            }
+            
+            /* Show mobile menu when active */
+            .cookies-header .nav-menu.active {
+                right: 0;
+            }
+            
+            /* Show overlay when menu is active */
+            .mobile-menu-overlay.active {
+                display: block;
+                opacity: 1;
+            }
+            
+            /* Mobile menu items */
+            .cookies-header .nav-menu li {
+                margin: 0;
+                border-bottom: 1px solid #f0f0f0;
+                opacity: 0;
+                transform: translateX(20px);
+                animation: slideInFromRight 0.3s ease forwards;
+            }
+            
+            .cookies-header .nav-menu li:nth-child(1) { animation-delay: 0.1s; }
+            .cookies-header .nav-menu li:nth-child(2) { animation-delay: 0.15s; }
+            .cookies-header .nav-menu li:nth-child(3) { animation-delay: 0.2s; }
+            .cookies-header .nav-menu li:nth-child(4) { animation-delay: 0.25s; }
+            .cookies-header .nav-menu li:nth-child(5) { animation-delay: 0.3s; }
+            .cookies-header .nav-menu li:nth-child(6) { animation-delay: 0.35s; }
+            
+            .cookies-header .nav-menu li:last-child {
+                border-bottom: none;
+                margin-top: 2rem;
+                padding-top: 1rem;
+                border-top: 2px solid #2A4A5A;
+            }
+            
+            .cookies-header .nav-menu a {
+                display: block;
+                padding: 1.2rem 0;
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: #1A1A1A;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                position: relative;
+            }
+            
+            .cookies-header .nav-menu a:hover {
+                color: #2A4A5A;
+                padding-left: 1rem;
+            }
+            
+            .cookies-header .nav-menu a::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background: linear-gradient(90deg, #2A4A5A, #9FB3DF);
+                transition: width 0.3s ease;
+            }
+            
+            .cookies-header .nav-menu a:hover::after {
+                width: 100%;
+            }
+            
+            /* Language switcher in mobile menu */
+            .cookies-header .language-switcher {
+                display: flex;
+                justify-content: center;
+                gap: 1.5rem;
+                margin-top: 1rem;
+                padding-top: 1rem;
+                margin-left: 0;
+            }
+            
+            .cookies-header .lang-btn {
+                padding: 0.5rem 1rem;
+                border: 2px solid #2A4A5A;
+                background: transparent;
+                color: #2A4A5A;
+                border-radius: 20px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                font-size: 0.9rem;
+                margin: 0;
+            }
+            
+            .cookies-header .lang-btn:hover,
+            .cookies-header .lang-btn.active {
+                background: #2A4A5A;
+                color: white;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(42, 74, 90, 0.3);
+            }
+        }
+
+        /* Small Mobile Navigation */
+        @media (max-width: 575px) {
+            .cookies-header .nav-menu {
+                width: 100%;
+                right: -100%;
+                padding: 80px 1.5rem 2rem;
+                border-radius: 0;
+            }
+            
+            .cookies-header nav {
+                padding: 0.75rem 1rem;
+                margin: 0.25rem;
+                max-width: calc(100% - 0.5rem);
+                min-height: 55px;
+                justify-content: flex-end;
+                background-color: transparent;
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .mobile-menu-btn {
+                width: 28px;
+                height: 28px;
+            }
+            
+            .hamburger-line {
+                height: 2.5px;
+            }
+            
+            .cookies-header .nav-menu a {
+                padding: 1rem 0;
+                font-size: 1rem;
+            }
+            
+            .cookies-header .language-switcher {
                 gap: 1rem;
             }
             
+            .cookies-header .lang-btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Responsive design for content */
+        @media (max-width: 768px) {
             .cookies-container {
                 padding: 1.5rem 1rem;
                 margin: 6rem auto 2rem auto;
@@ -322,7 +572,7 @@
         @media (max-width: 480px) {
             .cookies-container {
                 padding: 1rem 0.8rem;
-                margin: 5rem auto 1rem auto;
+                margin: 6rem auto 1rem auto;
             }
 
             .cookies-container h1 {
@@ -347,17 +597,28 @@
                 <img src="/logo.png" alt="AtiendeBot Logo">
                 <span class="logo-text">AtiendeBot</span>
             </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
             <ul class="nav-menu">
-                <li><a href="http://localhost:3000" onclick="navigateToSection('features')">Features</a></li>
-                <li><a href="http://localhost:3000" onclick="navigateToSection('use-cases')">Use Cases</a></li>
-                <li><a href="http://localhost:3000" onclick="navigateToSection('how-it-works')">How It Works</a></li>
-                <li><a href="http://localhost:3000" onclick="navigateToSection('faq')">FAQ</a></li>
-                <li><a href="http://localhost:3000" onclick="navigateToSection('contact')">Contact Us</a></li>
+                <li><a href="/" onclick="navigateToSection('features')">Features</a></li>
+                <li><a href="/" onclick="navigateToSection('use-cases')">Use Cases</a></li>
+                <li><a href="/" onclick="navigateToSection('how-it-works')">How It Works</a></li>
+                <li><a href="/" onclick="navigateToSection('faq')">FAQ</a></li>
+                <li><a href="/" onclick="navigateToSection('contact')">Contact Us</a></li>
                 <li class="language-switcher">
                     <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
                     <button class="lang-btn" onclick="switchLanguage('es')">ES</button>
                 </li>
             </ul>
+            
+            <!-- Mobile Menu Overlay -->
+            <div class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
         </nav>
     </div>
 
@@ -752,7 +1013,28 @@
             // Store the section to navigate to in localStorage
             localStorage.setItem('navigateToSection', sectionId);
             // Navigate to the main site
-            window.location.href = 'http://localhost:3000';
+            window.location.href = '/';
+        }
+
+        // Mobile menu functions
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            
+            navMenu.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            overlay.classList.remove('active');
         }
 
         function updateContent() {
