@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <script>
+        // Get all query parameters from the current URL
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Build the redirect URL with the custom scheme
+        let redirectUrl = 'rork-app://';
+        
+        // Add all query parameters to the redirect URL
+        if (urlParams.toString()) {
+            redirectUrl += '?' + urlParams.toString();
+        }
+        
+        // Log for debugging
+        console.log('Redirecting to:', redirectUrl);
+        
+        // Perform the redirect
+        window.location.href = redirectUrl;
+        
+        // Fallback message in case redirect doesn't work
+        setTimeout(function() {
+            document.body.innerHTML = '<p>If you are not redirected automatically, <a href="' + redirectUrl + '">click here</a>.</p>';
+        }, 1000);
+    </script>
+</body>
+</html>
+
